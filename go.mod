@@ -1,4 +1,4 @@
-module grpc-demo
+module github.com/mabarm/goGrpc
 
 go 1.22.5
 
