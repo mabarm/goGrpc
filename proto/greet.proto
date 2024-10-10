@@ -1,8 +1,17 @@
-syntax="proto3";
+syntax="proto3"; // Specifies Protocol Buffers version 3.
 
-option go_package = "./proto";
+option go_package = "./proto";// Defines the Go package for the generated code.
 
 package greet_service;
+
+/* 
+GreetService defines a gRPC service that handles the following RPCs:
+
+1. Unary RPC (`SayHello`): The client sends a single `NoParam` message, and the server responds with a `HelloResponse`.
+2. Server-side Streaming RPC (`SayHelloServerStreamin`): The client sends a `NamesList`, and the server streams back multiple `HelloResponse` messages.
+3. Client-side Streaming RPC (`SayHelloClientStreaming`): The client streams multiple `HelloRequest` messages, and the server responds with a single `MessageList`.
+4. Bidirectional Streaming RPC (`SayHelloBiDirectionalStreaming`): Both client and server send and receive streams of `HelloRequest` and `HelloResponse` messages concurrently.
+*/
 
 service GreetService{
  rpc SayHello(NoParam) returns (HelloResponse);
