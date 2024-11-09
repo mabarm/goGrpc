@@ -11,3 +11,10 @@
 - Purpose: A service defines the RPC methods that can be invoked by clients. It outlines the available operations and specifies what types of requests (messages) and responses (messages) are involved in each RPC method.
 - Usage: Services define how clients and servers interact through methods. Each method in a service specifies the input and output message types.
 - Role: Services define behavior or actions, specifying how clients can interact with the server and what data is exchanged. They are like interfaces or contracts that define what actions the server can perform.
+
+-----------------
+
+#Why protobuff ?
+
+1. Json parsing is more CPU intensive than protobuff as protobuff is binary which is closer to what memory understands.
+2. JSON size is bigger than protobuff.
